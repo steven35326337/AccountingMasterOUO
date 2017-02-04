@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <script type="text/javascript" src="jquery-1.12.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<title>account note</title>
+</head>
+<body>
+
+  <label for="usr"></label><br>
+  <input type="date"><br>
+	<select id="what">
+    <option>類別</option>
+	<option>食</option>
+	<option>衣</option>
+	<option>住</option>
+	<option>行</option>
+	<option>其他</option>
+</select><br>
+  <label >項目</label><br>
+  <input id="stuff"><br>
+	<label >價格</label><br>
+<input id="money"><br>
+	<button class="eee" id="submit">Submit</button><br>
+
+<script type="text/javascript" src="js/fdb-all.min.js"></script>
+	<script type="text/javascript">
+	   var fdb = new ForerunnerDB();
+	   var db = fdb.db("8787");
+	   var accountCollection = db.collection('account');
+
+	   accountCollection.load();
+
+	   $("#submit").click(function(){
+       	var account={
+       		stuff : $("#stuff").val(),
+       		money : $("#money").val()       		
+       	};
+       	$("#stuff").val("");
+       	$("#money").val("");
+       	accountCollection.insert(submit);
+       	accountCollection.save();
+       });
+</script>
+
+</body>
+</html>
