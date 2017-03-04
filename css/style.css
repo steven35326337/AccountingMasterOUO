@@ -1,5 +1,6 @@
 body{
-	background-image: url(../images/account_mast.png);
+background-image: url(../images/account_mast.png);	
+text-align: center;	
 }
 #am {
  color:rgb(180,25,255);
@@ -12,4 +13,20 @@ input{
 select{
 	width: 300px;
 	height: 50px;
+}
+h1{
+text-align: center;
+color:cyan;
+}
+#chaShuin{
+	text-align: center;
+	width: 300px;
+	height: 50px;
+}
+h2{
+	color:rgb(255,50,255);
+}
+input{
+	background-color: rgb(0,255,200);
+	color: white;
 }

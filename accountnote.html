@@ -11,7 +11,7 @@
 <body>
 
   <label for="usr"></label><br>
-  <input type="date"><br>
+  <input type="date" id="date"><br>
 	<select id="what">
     <option>類別</option>
 	<option>食</option>
@@ -36,14 +36,18 @@
 
 	   $("#submit").click(function(){
        	var account={
+          date : $("#date").val(),
        		stuff : $("#stuff").val(),
        		money : $("#money").val()       		
        	};
+        console.log(account)
+        $("#date").val("");
        	$("#stuff").val("");
        	$("#money").val("");
-       	accountCollection.insert(submit);
+       	accountCollection.insert(account);
        	accountCollection.save();
        });
+     
 </script>
 
 </body>
