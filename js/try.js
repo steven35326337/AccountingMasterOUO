@@ -6,7 +6,7 @@ var accountCollection = db.collection('account');
 
          accountCollection.load();
 	   function cs (stuff,money){
-	  	return "<tr><td>"+ stuff +"</td><td>"+ money +"</td></tr>"
+	  	return "<tr class='danger'><td>"+ stuff +"</td><td>"+ money +"</td></tr>"
 	  }
 	  
 

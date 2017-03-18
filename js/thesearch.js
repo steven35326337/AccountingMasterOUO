@@ -3,10 +3,10 @@ var db = fdb.db("8787");
 var accountCollection = db.collection('account');
          accountCollection.load();
 	   function cs (stuff,money){
-	  	return "<tr><td>"+ stuff +"</td><td>"+ money +"</td></tr>"
+	  	return "<tr class='danger'><td>"+ stuff +"</td><td>"+ money +"</td></tr>"
 	  }
 	   $("#chaShuin").click(function(){
-	   	$("#chaShuin").find("tr").remove();
+	   	$("#account").find("tr").remove();
 	   	var account=accountCollection.find({
 	   		date:{
 	   			$gte:$("#date").val(),
